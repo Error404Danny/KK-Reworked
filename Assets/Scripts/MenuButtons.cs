@@ -36,7 +36,9 @@ public class MenuButtons : MonoBehaviour
         //Plays the game...
         //Switch out the "SampleScene" with the game scene 
         StartCoroutine(DeepMeowWait());
-        //SceneManager.LoadScene("djscene", LoadSceneMode.Single);
+        
+        //if Line below is still commented out, delete it. 
+        //SceneManager.LoadScene("GameBoard", LoadSceneMode.Single);
     }
     public void QuitGame()
     {
@@ -54,7 +56,7 @@ public class MenuButtons : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("DeepMeow");
         yield return new WaitForSeconds(2.5f);
-        SceneManager.LoadScene("djscene", LoadSceneMode.Single);
+        SceneManager.LoadScene("GameBoard", LoadSceneMode.Single);
 
 
 

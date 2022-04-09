@@ -85,7 +85,7 @@ public class PauseManager : MonoBehaviour
     public void ReloadScene()
     {
         //Reloads the game. 
-        SceneManager.LoadScene("djscene", LoadSceneMode.Single);
+        SceneManager.LoadScene("GameBoard", LoadSceneMode.Single);
         //Fixes Issue with Timer.
         //Reloads Timer and then counts down when the game is restarted
         if (isPaused)
@@ -111,7 +111,7 @@ public class PauseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.P))
         {
             if (isPaused)
                 UnPauseGame();
